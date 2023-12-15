@@ -27,15 +27,15 @@ class Post{
         this.id=id
         this.title=title
         this.content=content
-        this.comment=[comment]
+        this.comment=[]
     }
     addComment(comment) {
         this.comment.push(comment);
       }
 }
-let mypost = new Post('1','My first blog', 'This is my first blog')
-mypost.addComment('Great job!');
-console.log(mypost)
+// let mypost = new Post('1','My first blog', 'This is my first blog')
+// mypost.addComment('Great job!');
+// console.log(mypost)
 
 class Comment {
     constructor(id, content, createdBy) {
@@ -51,8 +51,8 @@ class Comment {
   }
   class Facebook {
     constructor() {
-      this.groupList = [groupList];
-      this.pageList = [pageList];
+      this.groupList = [];
+      this.pageList = [];
     }
   
     addGroup(groupList) {
@@ -63,6 +63,9 @@ class Comment {
       this.pageList.push(pageList);
     }
   }
+  const socialMedia = new Facebook();
+  socialMedia.addGroup({ name: "Family" });
+  console.log(socialMedia)
   
   class FacebookPage {
     constructor(name) {
